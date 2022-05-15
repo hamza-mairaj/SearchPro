@@ -1,0 +1,139 @@
+label.sp-lable {
+    display: flex;
+    align-items: center;
+    padding: 10px 20px;
+    border: 1px solid #000;
+    border-radius: 50px;
+}
+
+input#search_query {
+    border: none;
+    font-size: 16px;
+    outline: none;
+    flex: 1;
+    background: transparent;
+    padding: 0;
+    min-height: auto;
+}
+
+.sp-icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 10px;
+}
+
+ul.sp-search-results {
+    list-style: none;
+    padding: 10px 20px !important;
+    margin: 0;
+    width: -webkit-fill-available;
+    position: absolute;
+    background: #fff;
+    margin-top: 10px;
+    z-index: 99999;
+    border-radius: 10px;
+    box-shadow: 0px 0px 32px 0px #0000000d;
+    max-height: 400px;
+    overflow-y: scroll;
+}
+
+ul.sp-search-results li a {
+    font-size: 16px;
+    text-decoration: none;
+    font-weight: normal;
+    line-height: 1.3;
+}
+
+ul.sp-search-results li {
+    animation: resultFad .3s ease;
+    display: flex;
+    align-items: center;
+    padding: 5px 0px;
+    gap: 10px;
+    margin: 0;
+}
+
+@keyframes resultFad {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0px);
+    }
+}
+label.sp-lable.loading {
+    animation: queryloading 1s ease infinite;
+}
+
+@keyframes queryloading {
+    0% {
+        border-color: #000;
+    }
+    50% {
+        border-color: #00000030;
+    }
+    100% {
+        border-color: #000;
+    }
+}
+
+p.sp-no-rest {
+    text-align: center;
+    font-size: 16px;
+    margin: 0;
+    font-weight: normal;
+}
+
+ul.sp-search-results li .icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-basis: 16px;
+}
+
+ul.sp-search-results .icon.product {
+    flex: 1;
+}
+
+.icon.product img {
+    border-radius: 5px;
+    width: 100%;
+}
+
+li.sp-s-result.product .main-content {
+    align-self: self-start;
+}
+
+li.sp-s-result .main-content {
+    flex: 4;
+}
+
+ul.sp-search-results .excerpt {
+    font-weight: normal;
+    font-size: 16px;
+    color: #000000a8;
+    line-height: 1.4;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+}
+
+span.matched {
+    font-weight: 600;
+    text-transform: capitalize;
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover, 
+input:-webkit-autofill:focus, 
+input:-webkit-autofill:active{
+    -webkit-background-clip: text;
+}
+
+.searchPro {
+    position: relative;
+}
